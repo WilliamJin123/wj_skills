@@ -108,8 +108,12 @@ If the user selects "Run defense first", invoke the Skill tool immediately and s
 
 ### If walking through fixes now:
 
-Iterate through each finding one at a time (highest severity first). For each issue, use AskUserQuestion with:
-- Concrete fix options
-- A **"Skip"** option to reject the fix and move on
+Iterate through findings one at a time (highest severity first). For each issue:
 
-Apply all the fixes after doing a full walkthrough of all the issues.
+1. Present the issue with AskUserQuestion, offering:
+   - Concrete fix options
+   - A **"Skip"** option to reject the fix and move on
+2. If the user selects a fix, **apply it immediately** before moving to the next issue.
+3. Move to the next finding and repeat.
+
+Do NOT batch fixes. Each fix is applied right after the user approves it.

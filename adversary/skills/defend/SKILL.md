@@ -173,13 +173,19 @@ Rules for the report:
 
 ## Step 6: Walk through fixes
 
-Iterate through each **surviving** finding (highest severity first). For each issue, use AskUserQuestion with:
-- Concrete fix options
-- A **"Skip"** option to reject the fix and move on
+Iterate through **surviving** findings one at a time (highest severity first). For each issue:
 
-After walking through surviving findings, ask once:
+1. Present the issue with AskUserQuestion, offering:
+   - Concrete fix options
+   - A **"Skip"** option to reject the fix and move on
+2. If the user selects a fix, **apply it immediately** before moving to the next issue.
+3. Move to the next finding and repeat.
+
+Do NOT batch fixes. Each fix is applied right after the user approves it.
+
+After all surviving findings are handled, ask once:
 > "Any dismissed findings you want to reinstate?"
 
 with options listing the dismissed findings plus a "None — dismissed findings look correct" option.
 
-Apply all accepted fixes after completing the full walkthrough.
+If the user reinstates any, walk through those the same way — one at a time, applying each fix immediately.
