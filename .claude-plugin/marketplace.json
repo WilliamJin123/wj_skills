@@ -18,6 +18,11 @@
       "name": "task_sprint",
       "source": "./task_sprint/",
       "description": "Adds a task sprint skill for managing and executing tasks efficiently"
+    },
+    {
+      "name": "variations",
+      "source": "./variations/",
+      "description": "HITL batches of diverse numbered variations for copy, offers, UI flows, and other taste-heavy decisions (default 10)"
     }
   ]
 }
