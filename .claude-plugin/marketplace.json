@@ -23,6 +23,11 @@
       "name": "variations",
       "source": "./variations/",
       "description": "HITL batches of diverse numbered variations for copy, offers, UI flows, and other taste-heavy decisions (default 10)"
+    },
+    {
+      "name": "humanizer",
+      "source": "./humanizer/",
+      "description": "Rewrite AI-sounding text so it reads like the writer without changing its facts (blader/humanizer + no-ai-slop tells)"
     }
   ]
 }
