@@ -1,7 +1,7 @@
 {
   "name": "variations",
   "description": "Generate diverse numbered variations for taste and copy decisions, then converge via HITL selection and merges",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": {
     "name": "William Jin",
     "email": "jinwilliam.jin@gmail.com"

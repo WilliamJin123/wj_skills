@@ -1,0 +1,4 @@
+interface:
+  display_name: "Adversary Defend"
+  short_description: "Filter critique findings with an independent defender"
+  default_prompt: "Use $adversary-defend on the critique above."

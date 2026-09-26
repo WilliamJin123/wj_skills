@@ -1,0 +1,36 @@
+{
+  "name": "wj-skills",
+  "owner": {
+    "name": "William Jin"
+  },
+  "metadata": {
+    "description": "William Jin's agent skills: adversarial review, tutorials, task sprints, variations, humanizer"
+  },
+  "plugins": [
+    {
+      "name": "tutor",
+      "source": "tutor",
+      "description": "Audience-aware tutorials and Q&A for any codebase: /tutor:init, /tutor:write, /tutor:ask"
+    },
+    {
+      "name": "adversary",
+      "source": "adversary",
+      "description": "Adversarial skills: one-pass critique + defend, and a recurring red-team loop (diff-scoped audits, orchestrated fixes on a branch)"
+    },
+    {
+      "name": "task-sprint",
+      "source": "task_sprint",
+      "description": "Sequential task execution from dated .task-sprint/ checklist files"
+    },
+    {
+      "name": "variations",
+      "source": "variations",
+      "description": "HITL batches of diverse numbered variations for copy, offers, UI flows, and other taste-heavy decisions (default 10)"
+    },
+    {
+      "name": "humanizer",
+      "source": "humanizer",
+      "description": "Rewrite AI-sounding text so it reads like the writer without changing its facts (blader/humanizer + no-ai-slop tells)"
+    }
+  ]
+}

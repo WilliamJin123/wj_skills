@@ -1,0 +1,6 @@
+interface:
+  display_name: "Task Sprint: Run"
+  short_description: "Work through .task-sprint checklists in a loop"
+  default_prompt: "Use $task-sprint-run to execute pending tasks."
+policy:
+  allow_implicit_invocation: false

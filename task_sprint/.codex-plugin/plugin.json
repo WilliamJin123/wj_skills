@@ -1,0 +1,33 @@
+{
+  "name": "task-sprint",
+  "version": "0.2.0",
+  "description": "Task sprint skill for managing and executing tasks efficiently",
+  "author": {
+    "name": "William Jin",
+    "email": "jinwilliam.jin@gmail.com"
+  },
+  "repository": "https://github.com/WilliamJin123/wj_skills",
+  "license": "MIT",
+  "keywords": [
+    "task management",
+    "sprint planning",
+    "execution",
+    "productivity"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Task Sprint",
+    "shortDescription": "Sequential task execution from dated .task-sprint/ checklist files",
+    "longDescription": "Task sprint skill for managing and executing tasks efficiently",
+    "developerName": "William Jin",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Create today's task file.",
+      "Run the pending tasks in .task-sprint/."
+    ]
+  }
+}

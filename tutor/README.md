@@ -4,17 +4,11 @@ Audience-aware tutorial generation and Q&A for any codebase. Tutor writes projec
 
 ## Installation
 
-Add this plugin to your Claude Code environment:
+See the [root README](../README.md#install). In Claude Code:
 
 ```bash
-/plugin add path/to/tutor
-```
-
-Or from a marketplace:
-
-```bash
-/plugin marketplace add <marketplace-repo>
-/plugin install tutor@<marketplace-name>
+/plugin marketplace add WilliamJin123/wj_skills
+/plugin install tutor@wj-skills
 ```
 
 ## Skills

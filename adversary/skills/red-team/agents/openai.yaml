@@ -1,0 +1,6 @@
+interface:
+  display_name: "Adversary Red-Team"
+  short_description: "Diff-scoped audit loop with fixes on a branch"
+  default_prompt: "Use $adversary-red-team to audit changes since the last audit tag."
+policy:
+  allow_implicit_invocation: false

@@ -1,7 +1,7 @@
 {
-  "name": "task_sprint",
+  "name": "task-sprint",
   "description": "Task sprint skill for managing and executing tasks efficiently",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "author": {
     "name": "William Jin",
     "email": "jinwilliam.jin@gmail.com"

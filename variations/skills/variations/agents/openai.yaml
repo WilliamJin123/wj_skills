@@ -1,0 +1,4 @@
+interface:
+  display_name: "Variations"
+  short_description: "Numbered creative options, then you pick"
+  default_prompt: "Use $variations to give me 10 versions of this."

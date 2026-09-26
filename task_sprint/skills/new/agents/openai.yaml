@@ -1,0 +1,4 @@
+interface:
+  display_name: "Task Sprint: New"
+  short_description: "Create today's .task-sprint task file"
+  default_prompt: "Use $task-sprint-new to start a task file for today."

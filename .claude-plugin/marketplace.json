@@ -3,21 +3,22 @@
   "owner": {
     "name": "William Jin"
   },
+  "description": "William Jin's agent skills: adversarial review, tutorials, task sprints, variations, humanizer",
   "plugins": [
     {
       "name": "tutor",
       "source": "./tutor/",
-      "description": "Adds a /tutor skill for quick code tutoring"
+      "description": "Audience-aware tutorials and Q&A for any codebase: /tutor:init, /tutor:write, /tutor:ask"
     },
     {
       "name": "adversary",
       "source": "./adversary/",
-      "description": "Adversarial skills: one-pass critique + defend, and a recurring red-team loop (diff-scoped audits, orchestrated fixes on a branch, weekly cron)"
+      "description": "Adversarial skills: one-pass critique + defend, and a recurring red-team loop (diff-scoped audits, orchestrated fixes on a branch)"
     },
     {
-      "name": "task_sprint",
+      "name": "task-sprint",
       "source": "./task_sprint/",
-      "description": "Adds a task sprint skill for managing and executing tasks efficiently"
+      "description": "Sequential task execution from dated .task-sprint/ checklist files"
     },
     {
       "name": "variations",

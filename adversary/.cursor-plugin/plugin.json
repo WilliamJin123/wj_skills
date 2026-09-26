@@ -1,0 +1,21 @@
+{
+  "name": "adversary",
+  "version": "0.4.0",
+  "description": "Adversarial critique, defense, and a recurring red-team sweep loop (report / fix)",
+  "author": {
+    "name": "William Jin",
+    "email": "jinwilliam.jin@gmail.com"
+  },
+  "repository": "https://github.com/WilliamJin123/wj_skills",
+  "license": "MIT",
+  "keywords": [
+    "adversarial",
+    "testing",
+    "debugging",
+    "planning",
+    "red-team",
+    "audit"
+  ],
+  "skills": "./skills/",
+  "displayName": "Adversary"
+}

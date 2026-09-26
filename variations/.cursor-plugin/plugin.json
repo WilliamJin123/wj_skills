@@ -1,0 +1,22 @@
+{
+  "name": "variations",
+  "version": "0.2.0",
+  "description": "Generate diverse numbered variations for taste and copy decisions, then converge via HITL selection and merges",
+  "author": {
+    "name": "William Jin",
+    "email": "jinwilliam.jin@gmail.com"
+  },
+  "repository": "https://github.com/WilliamJin123/wj_skills",
+  "license": "MIT",
+  "keywords": [
+    "hitl",
+    "copywriting",
+    "creative",
+    "offers",
+    "ui",
+    "diversity",
+    "marketing"
+  ],
+  "skills": "./skills/",
+  "displayName": "Variations"
+}

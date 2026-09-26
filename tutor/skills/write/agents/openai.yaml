@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tutor Write"
+  short_description: "Write or update an audience-aware tutorial"
+  default_prompt: "Use $tutor-write to write a tutorial on this module."

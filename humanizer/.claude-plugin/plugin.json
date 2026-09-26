@@ -1,7 +1,7 @@
 {
   "name": "humanizer",
   "description": "Rewrite AI-sounding text so it reads like the writer without changing what it says. blader/humanizer plus colon reveals, faux-insight setups, and reader-directing commentary from no-ai-slop.",
-  "version": "3.1.1",
+  "version": "3.2.0",
   "author": {
     "name": "William Jin",
     "email": "jinwilliam.jin@gmail.com"

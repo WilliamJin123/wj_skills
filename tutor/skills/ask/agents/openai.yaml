@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tutor Ask"
+  short_description: "Answer questions from project tutorials first"
+  default_prompt: "Use $tutor-ask: how does this part of the code work?"

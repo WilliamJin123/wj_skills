@@ -1,0 +1,34 @@
+{
+  "name": "humanizer",
+  "version": "3.2.0",
+  "description": "Rewrite AI-sounding text so it reads like the writer without changing what it says. blader/humanizer plus colon reveals, faux-insight setups, and reader-directing commentary from no-ai-slop.",
+  "author": {
+    "name": "William Jin",
+    "email": "jinwilliam.jin@gmail.com"
+  },
+  "repository": "https://github.com/WilliamJin123/wj_skills",
+  "license": "MIT",
+  "keywords": [
+    "writing",
+    "editing",
+    "humanize",
+    "prose",
+    "style",
+    "ai-tells"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Humanizer",
+    "shortDescription": "Rewrite AI-sounding text so it reads like the writer without changing its facts (blader/humanizer + no-ai-slop tells)",
+    "longDescription": "Rewrite AI-sounding text so it reads like the writer without changing what it says. blader/humanizer plus colon reveals, faux-insight setups, and reader-directing commentary from no-ai-slop.",
+    "developerName": "William Jin",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Rewrite this text in my voice without changing its facts."
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tutor Init"
+  short_description: "Set up tutorial conventions for this project"
+  default_prompt: "Use $tutor-init to configure tutorials here."

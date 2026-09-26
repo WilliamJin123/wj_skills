@@ -1,0 +1,4 @@
+interface:
+  display_name: "Adversary Critique"
+  short_description: "Hostile audit of code, plans, or diffs"
+  default_prompt: "Use $adversary-critique on the changes in this branch."
