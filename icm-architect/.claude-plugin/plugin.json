@@ -1,0 +1,17 @@
+{
+  "name": "icm-architect",
+  "description": "Design a process or body of knowledge into an ICM workspace (folder structure as agent architecture), or restructure an existing folder into one. Vendored from RinDig/icm-architect.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Jake Van Clief"
+  },
+  "repository": "https://github.com/RinDig/icm-architect",
+  "license": "MIT",
+  "keywords": [
+    "icm",
+    "workspace",
+    "context",
+    "agents",
+    "knowledge-base"
+  ]
+}

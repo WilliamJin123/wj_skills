@@ -9,6 +9,7 @@ Agent skills for Claude Code, Codex, Cursor, and any agent that reads `SKILL.md`
 | `task-sprint` | `new`, `run` | Dated checklist files worked through in a loop |
 | `variations` | `variations` | N numbered creative options, then you pick or merge |
 | `humanizer` | `humanizer` | Rewrite AI-sounding text in the writer's voice |
+| `icm-architect` | `icm-architect` | Turn a workflow, idea, or folder into an ICM workspace. Vendored from [RinDig/icm-architect](https://github.com/RinDig/icm-architect) |
 
 ## Install
 
@@ -86,5 +87,13 @@ The pre-commit hook:
 2. Runs `scripts/sync_manifests.py`. It writes the Codex and Cursor manifests from `.claude-plugin/*.json` and keeps each `SKILL.md` `version:` on its plugin version.
 
 Edit only the `.claude-plugin` manifests. Check sync with `python3 scripts/sync_manifests.py --check`.
+
+### Vendored skills
+
+`icm-architect/skills/icm-architect/` is a `git subtree` of [RinDig/icm-architect](https://github.com/RinDig/icm-architect). Don't edit it here. Only the manifests in `icm-architect/.*-plugin/` are ours. Pull upstream changes with:
+
+```
+git subtree pull --prefix=icm-architect/skills/icm-architect git@github.com:RinDig/icm-architect.git main --squash
+```
 
 Skill `name` fields follow the [Agent Skills spec](https://agentskills.io/specification): lowercase letters, digits, and hyphens only. Claude Code names plugin skills `plugin:<folder>`, so `/adversary:critique` still works.

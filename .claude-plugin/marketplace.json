@@ -3,7 +3,7 @@
   "owner": {
     "name": "William Jin"
   },
-  "description": "William Jin's agent skills: adversarial review, tutorials, task sprints, variations, humanizer",
+  "description": "William Jin's agent skills: adversarial review, tutorials, task sprints, variations, humanizer, ICM architect",
   "plugins": [
     {
       "name": "tutor",
@@ -29,6 +29,11 @@
       "name": "humanizer",
       "source": "./humanizer/",
       "description": "Rewrite AI-sounding text so it reads like the writer without changing its facts (blader/humanizer + no-ai-slop tells)"
+    },
+    {
+      "name": "icm-architect",
+      "source": "./icm-architect/",
+      "description": "Turn a workflow, idea, or folder into an ICM workspace one agent can walk (vendored from RinDig/icm-architect)"
     }
   ]
 }

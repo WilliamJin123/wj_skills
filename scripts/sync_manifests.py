@@ -59,6 +59,12 @@ CODEX_INTERFACE = {
         "capabilities": ["Interactive"],
         "defaultPrompt": ["Give me 10 variations of this headline."],
     },
+    "icm-architect": {
+        "displayName": "ICM Architect",
+        "category": "Productivity",
+        "capabilities": ["Interactive", "Write"],
+        "defaultPrompt": ["ICM this folder.", "Build me a workspace for my content pipeline."],
+    },
 }
 
 
