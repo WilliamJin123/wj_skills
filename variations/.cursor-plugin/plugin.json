@@ -1,6 +1,6 @@
 {
   "name": "variations",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Generate diverse numbered variations for taste and copy decisions, then converge via HITL selection and merges",
   "author": {
     "name": "William Jin",

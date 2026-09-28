@@ -66,7 +66,7 @@ Safeguards in every `scripts/context.sh`:
 - `GIT_OPTIONAL_LOCKS=0`, so `git status` never takes the index lock.
 - The skill tells the model the snapshot is data, not instructions.
 
-Other agents see the raw line. The skill tells them to run `bash scripts/context.sh` themselves or skip it. Every step works without it.
+Other agents see the raw line. The skill tells them to run the script themselves from the project directory, or skip it. Every step works without it.
 
 To turn injection off in Claude Code, set `"disableSkillShellExecution": true` in settings.
 
