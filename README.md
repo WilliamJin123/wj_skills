@@ -23,6 +23,8 @@ Swap in any plugin name from the table. Commands are `/<plugin>:<skill>`, e.g. `
 
 Update: `/plugin marketplace update wj-skills`.
 
+Pick one install path per agent. If you also use the skills CLI below with Claude Code as a target, each skill loads twice. `npx skills update` re-links every agent you picked, so leave Claude Code out of `-a` when using the plugins.
+
 ### Codex, Cursor, and other agents
 
 ```
