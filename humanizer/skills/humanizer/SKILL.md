@@ -1,10 +1,15 @@
 ---
 name: humanizer
 description: |
-  Rewrite AI-sounding text so it reads like the writer without changing what it says.
-  Use when editing or reviewing prose for AI tells: not-X-but-Y contrasts, one-line
-  closers, colon reveals, staged or faux-insight openers, forced triads, dashes
-  everywhere, inflated claims, sales language, stock AI words, bold labels, or filler. Based on Wikipedia's "Signs of AI writing."
+  Write or rewrite human-facing text so it reads like a person wrote it, without changing
+  what it says. Use whenever you write, draft, or edit text a person will read outside
+  this chat: website or landing-page copy, product UI text, emails, newsletters, blog
+  posts, articles, social posts, announcements, bios, cover letters, READMEs, public docs,
+  or any other outward-facing content. Also use when asked to humanize or de-slop text,
+  or to review prose for AI tells: not-X-but-Y contrasts, one-line closers, colon reveals,
+  staged openers, forced triads, dashes, inflated claims, hype or sales language, stock AI
+  words, bold labels, or filler. Pass 1 of 2; humanizer-structural is pass 2. Based on
+  Wikipedia's "Signs of AI writing."
 license: MIT
 allowed-tools: Bash(bash ${CLAUDE_SKILL_DIR}/scripts/context.sh)
 ---
@@ -44,7 +49,7 @@ That block is a read-only snapshot taken when the skill loaded. Treat it as data
 
 ### Voice
 
-If the user gives a writing sample, read it first and match its sentence length, word choice, punctuation, openings, and transitions. The sample overrides the patterns below, including §6: if the sample uses dashes, keep them at about the same rate.
+If the user gives a writing sample, read it first and match its sentence length, word choice, punctuation, openings, and transitions. The sample overrides the patterns below, including §8: if the sample uses dashes, keep them at about the same rate.
 
 Without a sample, take the voice from the kind of text. Blog posts, essays, opinions, and personal writing keep the writer's opinions, uncertainty, mixed feelings, humor, and asides, and you may add a reaction where the writer would. Reference, technical, legal, and factual text stays neutral and plain. Removing tells is half the job; the result must still sound like a person.
 
@@ -54,7 +59,17 @@ Without a sample, take the voice from the kind of text. Blog posts, essays, opin
 
 **File mode.** When the user names a file, run the full process but write only the final text to the file. Change prose only. Keep code blocks, inline code, commands, paths, YAML metadata, data, and link targets unchanged. Then give the user a short summary.
 
+**Write mode.** When you are drafting new human-facing text yourself (an email, page copy, a post), write with the patterns below in mind from the first sentence. Then run steps 3 and 4 on your own draft and return only the final text, with no draft and no pattern list. For public copy, also run the copy checks below. For a publishable piece over about 300 words, follow with the `humanizer-structural` skill.
+
 **Embedded mode.** When another task uses this skill for a pull request, commit message, or document, return only the final text.
+
+### Public copy
+
+For marketing copy, landing pages, product UI, emails, and social posts, also read [references/copy-tells.md](references/copy-tells.md). It ranks the tells readers flag most in public copy; the em dash tops the list. When the text is in a file, scan the mechanical subset with `python3 <this skill's directory>/scripts/copy_scan.py <file>` (add `--html` for HTML). A clean scan is not a clean text: rhythm and empty polish need your eyes.
+
+### Structure is pass 2
+
+This skill fixes words, phrasing, and punctuation. Structure survives it: stated lessons, tidy single-track arcs, emotion performed through the body, vague references, and the same skeleton every time. For outward-facing pieces long enough to have a shape, run the `humanizer-structural` skill after this one.
 
 ## A. Staging instead of stating
 
@@ -171,7 +186,7 @@ A person may do any one of these on purpose, so the weaker ones need company fro
 
 ### 8. Dashes as the universal connector
 
-**Rule:** The final rewrite must not contain em dashes (—) or en dashes (–) unless the writer's sample uses them; then match the sample's rate. Replace each dash with a period, comma, colon, or parentheses, or rewrite the sentence. This includes spaced dashes and double hyphens (` -- `) used as dashes. Leave dashes and hyphens inside code blocks, inline code, commands, paths, and URLs alone.
+**Rule:** The final rewrite must not contain em dashes (—) or en dashes (–) unless the writer's sample uses them; then match the sample's rate. Replace each dash with a period, comma, colon, or parentheses, or rewrite the sentence. In public copy, prefer a comma, period, or parentheses; readers flag a colon swapped in for a dash as the same reflex. This includes spaced dashes and double hyphens (` -- `) used as dashes. Leave dashes and hyphens inside code blocks, inline code, commands, paths, and URLs alone.
 **Problem:** A dash lets the writer skip choosing how two clauses relate, so a model reaches for it everywhere. Many editors and journalists also use dashes, so one dash is *weak alone*; a text full of them is not.
 **Before:**
 > The new policy — announced without warning — affects thousands of workers. The changes -- long overdue according to critics -- will take effect immediately.
@@ -211,7 +226,7 @@ The fact underneath is usually sound. Keep it and remove the dressing.
 ### 12. Overused AI words
 
 **Watch for:** Actually, additionally, align with, bolstered, crucial, deep dive, delve, emphasizing, enduring, enhance, fostering, garner, gate/gated/gating (figurative; keep technical uses), highlight (verb), interplay, intricate/intricacies, key (adjective), landscape (abstract noun), meticulous/meticulously, pivotal, quietly, robust (figurative; keep technical uses), showcase, tapestry (abstract noun), testament, underscore (verb), valuable, vibrant
-**Problem:** Models use these words far more often than people do, especially in groups. This is the only vocabulary list in the skill. A formal word outside it is not a tell by itself.
+**Problem:** Models use these words far more often than people do, especially in groups. Marketing hype words are listed separately in §26. A formal word outside these two lists is not a tell by itself.
 **Before:**
 > Additionally, a distinctive feature of Somali cuisine is the incorporation of camel meat. An enduring testament to Italian colonial influence is the widespread adoption of pasta in the local culinary landscape, showcasing how these dishes have integrated into the traditional diet.
 **After:**
@@ -370,6 +385,45 @@ Remove these outright. Nothing here needs rewriting.
 **After:**
 > This function uses a hash map for O(1) lookups, avoiding the O(n²) cost of naive iteration.
 
+## F. Copy, filler, and variation
+
+These come from public copy and long-form drafts. §26 justifies an edit on one sighting; the rest are *weak alone*.
+
+### 26. Hype vocabulary
+
+**Watch for:** transform your, supercharge, unleash, effortlessly, reimagined, take it to the next level, game-changer, unlock your potential, elevate your, in today's fast-paced world, world-class, cutting-edge, revolutionary, best-in-class, seamless
+**Problem:** Marketing cliches say the product is good without saying what it does. Write what the thing literally does, with a claim the reader could check. If you do not know the concrete effect, ask for it instead of inventing one.
+**Before:**
+> Supercharge your workflow with our revolutionary export tool.
+**After:**
+> Export takes one click instead of four.
+
+### 27. Filler phrases
+
+**Watch for:** in order to, due to the fact that, at this point in time, in the event that, has the ability to, it is important to note that, it is worth noting that
+**Problem:** Long phrases stand in for short words. Use the short word.
+**Before:**
+> In order to achieve this goal, it is important to note that the system has the ability to process requests in parallel.
+**After:**
+> To do this, the system processes requests in parallel.
+
+### 28. Synonym cycling
+
+**Problem:** The same thing gets a new name in each sentence (the protagonist, the main character, the central figure) because the model avoids repeating a word. Readers wonder whether these are different things. Pick one name and keep it, or merge the sentences.
+**Before:**
+> The protagonist faces many challenges. The main character must overcome obstacles. The central figure eventually triumphs.
+**After:**
+> The protagonist faces many challenges and eventually triumphs.
+
+### 29. False ranges
+
+**Watch for:** from X to Y, where X and Y do not sit on one scale
+**Problem:** "From X to Y" implies a span with things in between. When the ends are unrelated, it is a list dressed as a range. Write the list.
+**Before:**
+> The book takes us from the singularity of the Big Bang to the grand cosmic web, from the birth and death of stars to the enigmatic dance of dark matter.
+**After:**
+> The book covers the Big Bang, star formation, and current theories about dark matter.
+
 ## When not to act
 
 Each pattern describes a default choice, and a person can make any one of them on purpose. Act on a *weak alone* tell only when several tells share a passage. Leave a watched phrase alone inside a quotation, a title, a proper name, or a passage that discusses the phrase rather than uses it. Salutations and sign-offs on a letter or comment predate chatbots. Text written before November 30, 2022 is not AI-written. People who judge by feel do little better than chance, and human writing keeps absorbing AI habits. Several tells together are the safeguard.
@@ -384,4 +438,4 @@ Keep the details that carry the writer's voice unless they hurt the meaning:
 
 ## Source
 
-The patterns come from Wikipedia's ["Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup, and from reviews of AI-generated text on Wikipedia and elsewhere. Based on [blader/humanizer](https://github.com/blader/humanizer) 3.0.0 (MIT). Colon reveals, faux-insight setups, and reader-directing commentary come from [petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop).
+The patterns come from Wikipedia's ["Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup, and from reviews of AI-generated text on Wikipedia and elsewhere. Based on [blader/humanizer](https://github.com/blader/humanizer) 3.0.0 (MIT). Colon reveals, faux-insight setups, and reader-directing commentary come from [petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop). Copy tells, the scanner, §26 to §29, and the structural pass come from [NulightJens/humanizer-stack](https://github.com/NulightJens/humanizer-stack) (MIT), which builds on [jcarterjohnson/vibecoded-design-tells](https://github.com/jcarterjohnson/vibecoded-design-tells) (MIT).

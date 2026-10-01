@@ -1,7 +1,7 @@
 {
   "name": "humanizer",
-  "description": "Rewrite AI-sounding text so it reads like the writer without changing what it says. blader/humanizer plus colon reveals, faux-insight setups, and reader-directing commentary from no-ai-slop.",
-  "version": "3.2.1",
+  "description": "Write and rewrite human-facing text (web copy, emails, blogs, posts) so it reads like the writer without changing what it says. Two passes: words and phrasing (blader/humanizer, no-ai-slop, humanizer-stack copy tells), then structure (humanizer-stack, StoryScope).",
+  "version": "3.3.0",
   "author": {
     "name": "William Jin",
     "email": "jinwilliam.jin@gmail.com"

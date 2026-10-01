@@ -8,7 +8,7 @@ Agent skills for Claude Code, Codex, Cursor, and any agent that reads `SKILL.md`
 | `tutor` | `init`, `write`, `ask` | Audience-aware tutorials and Q&A grounded in them |
 | `task-sprint` | `new`, `run` | Dated checklist files worked through in a loop |
 | `variations` | `variations` | N numbered creative options, then you pick or merge |
-| `humanizer` | `humanizer` | Rewrite AI-sounding text in the writer's voice |
+| `humanizer` | `humanizer`, `structural` | Write or rewrite human-facing text in the writer's voice: words first, then structure. Folds in [NulightJens/humanizer-stack](https://github.com/NulightJens/humanizer-stack) |
 | `icm-architect` | `icm-architect` | Turn a workflow, idea, or folder into an ICM workspace. Vendored from [RinDig/icm-architect](https://github.com/RinDig/icm-architect) |
 
 ## Install

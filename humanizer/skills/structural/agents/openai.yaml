@@ -1,0 +1,4 @@
+interface:
+  display_name: "Humanizer Structural"
+  short_description: "Fix the structural signs of AI writing"
+  default_prompt: "Use $humanizer-structural on this draft after the humanizer pass."

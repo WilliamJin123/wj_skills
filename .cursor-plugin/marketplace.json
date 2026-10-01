@@ -30,7 +30,7 @@
     {
       "name": "humanizer",
       "source": "humanizer",
-      "description": "Rewrite AI-sounding text so it reads like the writer without changing its facts (blader/humanizer + no-ai-slop tells)"
+      "description": "Write and rewrite human-facing text so it reads like the writer: a words pass and a structure pass (blader/humanizer + no-ai-slop + humanizer-stack)"
     },
     {
       "name": "icm-architect",

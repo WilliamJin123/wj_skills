@@ -19,3 +19,17 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+Portions (references/copy-tells.md, scripts/copy_scan.py, and skills/structural/)
+come from NulightJens/humanizer-stack:
+
+MIT License
+
+Copyright (c) 2026 Jens Heitmann
+
+The same MIT terms above apply. copy-tells.md and copy_scan.py derive from
+jcarterjohnson/vibecoded-design-tells (MIT). The pattern catalog derives from
+Wikipedia:Signs of AI writing (CC BY-SA 4.0), maintained by WikiProject AI Cleanup.
+The structural skill cites Russell et al. 2026, arXiv:2604.03136.
