@@ -5,7 +5,7 @@ description: >
   or recent changes. Finds flaws, gaps, contradictions, and security
   issues, then proposes concrete corrections. Works on files, directories,
   git diffs, or open plans.
-version: 0.4.1
+version: 0.4.2
 user-invocable: true
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Task, AskUserQuestion, Bash(bash ${CLAUDE_SKILL_DIR}/scripts/context.sh)
 ---

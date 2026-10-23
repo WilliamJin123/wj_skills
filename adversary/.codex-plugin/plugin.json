@@ -1,6 +1,6 @@
 {
   "name": "adversary",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Adversarial critique, defense, and a recurring red-team sweep loop (report / fix)",
   "author": {
     "name": "William Jin",

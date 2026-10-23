@@ -8,7 +8,7 @@ description: >
   mode is a focus prompt threaded into every finder. Subagents run on cheap
   models; synthesis stays with the orchestrator. Report mode never edits
   code; fix mode never touches main. Rerun whenever a sweep is wanted.
-version: 0.4.1
+version: 0.4.2
 user-invocable: true
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Task, AskUserQuestion, Artifact, SendMessage, ToolSearch, Bash(bash ${CLAUDE_SKILL_DIR}/scripts/context.sh)
 ---

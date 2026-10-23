@@ -5,7 +5,7 @@ description: >
   defense agent that reads the original source material and the critique findings
   without the attacker's reasoning context. Filters out overblown, invalid, or
   already-handled issues and produces a reconciled report of what actually matters.
-version: 0.4.1
+version: 0.4.2
 user-invocable: true
 allowed-tools: Read, Glob, Grep, Bash, Task, AskUserQuestion, Bash(bash ${CLAUDE_SKILL_DIR}/scripts/context.sh)
 ---
