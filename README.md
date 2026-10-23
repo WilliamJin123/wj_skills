@@ -9,6 +9,7 @@ Agent skills for Claude Code, Codex, Cursor, and any agent that reads `SKILL.md`
 | `task-sprint` | `new`, `run` | Dated checklist files worked through in a loop |
 | `variations` | `variations` | N numbered creative options, then you pick or merge |
 | `humanizer` | `humanizer`, `structural` | Write or rewrite human-facing text in the writer's voice: words first, then structure. Folds in [NulightJens/humanizer-stack](https://github.com/NulightJens/humanizer-stack) |
+| `jira` | `jira` | Jira work items through the official Atlassian CLI (`acli`): plain text, fewer tokens than an MCP server. Writes wait for approval |
 | `icm-architect` | `icm-architect` | Turn a workflow, idea, or folder into an ICM workspace. Vendored from [RinDig/icm-architect](https://github.com/RinDig/icm-architect) |
 
 ## Install

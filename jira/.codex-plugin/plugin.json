@@ -1,0 +1,34 @@
+{
+  "name": "jira",
+  "version": "0.1.0",
+  "description": "Read, search, and update Jira work items through the official Atlassian CLI (acli): plain-text output, fewer tokens than an MCP server",
+  "author": {
+    "name": "William Jin",
+    "email": "jinwilliam.jin@gmail.com"
+  },
+  "repository": "https://github.com/WilliamJin123/wj_skills",
+  "license": "MIT",
+  "keywords": [
+    "jira",
+    "atlassian",
+    "acli",
+    "tickets",
+    "cli"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Jira",
+    "shortDescription": "Jira work items through the official Atlassian CLI (acli): read, search, comment, transition, with writes behind approval",
+    "longDescription": "Read, search, and update Jira work items through the official Atlassian CLI (acli): plain-text output, fewer tokens than an MCP server",
+    "developerName": "William Jin",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Read PROJ-123.",
+      "What Jira tickets do I have open?"
+    ]
+  }
+}

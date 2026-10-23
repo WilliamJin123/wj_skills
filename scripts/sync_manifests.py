@@ -65,6 +65,12 @@ CODEX_INTERFACE = {
         "capabilities": ["Interactive", "Write"],
         "defaultPrompt": ["ICM this folder.", "Build me a workspace for my content pipeline."],
     },
+    "jira": {
+        "displayName": "Jira",
+        "category": "Productivity",
+        "capabilities": ["Interactive", "Write"],
+        "defaultPrompt": ["Read PROJ-123.", "What Jira tickets do I have open?"],
+    },
 }
 
 

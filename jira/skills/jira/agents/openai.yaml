@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jira"
+  short_description: "Jira tickets through the Atlassian CLI"
+  default_prompt: "Use $jira to read PROJ-123."
