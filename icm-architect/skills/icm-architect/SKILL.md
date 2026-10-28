@@ -31,6 +31,7 @@ Every ICM, whatever its form, obeys these. When building or restructuring, enfor
 - **Building from a described process, idea, or problem** → Build mode.
 - **An existing folder, repo, or vault that needs ICM structure** → Restructure mode.
 - **A body of work later agents must edit** (code, markdown, or mixed) → System map form. Read [references/system-map.md](references/system-map.md) after picking the form.
+- **A repo with a generated map** (`kestrel.json`, or a `map/generated/` that a tool writes from the code) → System map form in two-layer mode: the generated map holds the shape, the cards hold the why. Read [references/system-map.md](references/system-map.md), then [references/two-layer.md](references/two-layer.md).
 
 ## Build mode
 
@@ -110,5 +111,6 @@ If a step fails, fix the structure — not by explaining more, but by moving or 
 - [references/core.md](references/core.md) — the five design principles, the five-layer context hierarchy, naming conventions, token discipline. Read when writing contracts or when a structural call is contested.
 - [references/forms.md](references/forms.md) — the six forms in depth: skeletons, moves, failure modes. Read at step 2 of Build mode or step 2 of Restructure mode.
 - [references/system-map.md](references/system-map.md) — audit pipeline for the System map form. Read when that form is chosen.
+- [references/two-layer.md](references/two-layer.md) — two-layer mode for the System map: generated shape, written why, stamps and decision triggers. Read when the repo has a generated map.
 - [references/reference-integrity.md](references/reference-integrity.md) — the move-safety gate: what points at a file, case-folded destinations, copy-verify-remove. Read at step 4 of Restructure mode, or any time a move is contested.
 - [assets/templates/](assets/templates/) — copyable starters: `CLAUDE.md`, workspace `CONTEXT.md`, `stage-CONTEXT.md`, `node.md`, `object.md`, `process.md`, `schema.md`, `questionnaire.md`.
