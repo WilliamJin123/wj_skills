@@ -4,7 +4,7 @@
     "name": "William Jin"
   },
   "metadata": {
-    "description": "William Jin's agent skills: adversarial review, tutorials, task sprints, variations, humanizer, ICM architect, Jira"
+    "description": "William Jin's agent skills: adversarial review, tutorials, task sprints, variations, humanizer, ICM architect, Jira, handoff"
   },
   "plugins": [
     {
@@ -41,6 +41,11 @@
       "name": "jira",
       "source": "jira",
       "description": "Jira work items through the official Atlassian CLI (acli): read, search, comment, transition, with writes behind approval"
+    },
+    {
+      "name": "handoff",
+      "source": "handoff",
+      "description": "Write a handoff file before /clear: state, decisions and the files to reread, so the next session continues without a compaction"
     }
   ]
 }

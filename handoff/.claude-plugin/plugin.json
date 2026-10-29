@@ -1,0 +1,12 @@
+{
+  "name": "handoff",
+  "description": "Write a handoff file before /clear, so the next session picks up the work without a compaction: state, decisions and the files to reread.",
+  "version": "0.1.0",
+  "author": {
+    "name": "William Jin",
+    "email": "jinwilliam.jin@gmail.com"
+  },
+  "repository": "https://github.com/WilliamJin123/wj_skills",
+  "license": "MIT",
+  "keywords": ["handoff", "context", "clear", "compact", "session"]
+}
