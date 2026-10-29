@@ -2,24 +2,31 @@
 name: handoff
 description: >
   Write a handoff file so the user can /clear instead of compacting, and the next session
-  continues the work. Use when the user asks for a handoff, says they will clear, or the
-  context is long and a fresh session would be cheaper than a compaction.
-version: 0.1.0
+  continues the work with /handoff:resume. Use when the user asks for a handoff, says they
+  will clear, or the context is long and a fresh session would be cheaper than a compaction.
+version: 0.2.0
 user-invocable: true
+allowed-tools: Bash(bash ${CLAUDE_SKILL_DIR}/scripts/context.sh *)
 ---
 
 # Handoff
 
-Write what a new session needs to continue. Nothing else. Then tell the user the one line to paste after `/clear`.
+Write what a new session needs to continue. Nothing else. Then tell the user the line to paste after `/clear`.
+
+## Live context
+
+!`bash ${CLAUDE_SKILL_DIR}/scripts/context.sh ${CLAUDE_SESSION_ID}`
 
 ## Where
 
-`handoffs/<YYYY-MM-DD>-<topic>.md` under the working directory. One file per session: other sessions may share the checkout. Overwrite your own file on a second handoff.
+`<repo>/designs/handoffs/<session key>.md`, beside the design docs of the repo the work is in. The key is the session name (`/rename`), else the short session id. One file per session: other sessions share the checkout. Overwrite your own file on a second handoff. Work across repos: put it in the main one.
+
+Never commit a handoff. The script adds `handoffs/` to each repo's `.git/info/exclude`.
 
 ## Before you write
 
 Check the facts, do not recall them:
-- `git status` and `git log --oneline -5` in each repo you changed.
+- The repo list above, plus `git log --oneline -5` in each repo you changed.
 - Which background tasks, servers and watchers of yours run now.
 
 ## Sections
@@ -27,7 +34,7 @@ Check the facts, do not recall them:
 Short bullets. Summaries, not transcripts. Point to a file instead of copying it.
 
 1. **Goal**: the task in one or two sentences, in the user's terms.
-2. **Read first**: the files the next session must reread before it acts, in order, with why. Design docs, plans, specs, the code it will edit (path:line where it helps). This is the most important section.
+2. **Read first**: the files the next session must reread before it acts, in order, one per bullet, with why. Design docs, plans, specs, the code it will edit. Write each path in backticks, relative to the repo root or absolute (`path:line` is fine). `/handoff:resume` loads these files into the new session, so put no path here that it does not need. This is the most important section.
 3. **Done**: what is finished, with commit hashes and whether it is pushed and deployed.
 4. **In progress**: uncommitted changes (file list) and where the work stopped.
 5. **Next**: the next steps, in order.
@@ -43,6 +50,4 @@ Leave out what CLAUDE.md, memory or the files already say. Leave out empty secti
 
 Reply with the path and this line:
 
-`Read handoffs/<file>.md and continue.`
-
-The next session reads the handoff, then each file under **Read first**, before it acts. When the work in the file is done, it deletes the file: a stale handoff misleads.
+`/clear`, then `/handoff:resume <session key>`

@@ -1,6 +1,6 @@
 {
   "name": "handoff",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Write a handoff file before /clear, so the next session picks up the work without a compaction: state, decisions and the files to reread.",
   "author": {
     "name": "William Jin",
@@ -18,7 +18,7 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "handoff",
-    "shortDescription": "Write a handoff file before /clear: state, decisions and the files to reread, so the next session continues without a compaction",
+    "shortDescription": "Write a session handoff beside the design docs before /clear; /handoff:resume loads it and the files to reread",
     "longDescription": "Write a handoff file before /clear, so the next session picks up the work without a compaction: state, decisions and the files to reread.",
     "developerName": "William Jin",
     "category": "Productivity",

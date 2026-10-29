@@ -45,7 +45,7 @@
     {
       "name": "handoff",
       "source": "handoff",
-      "description": "Write a handoff file before /clear: state, decisions and the files to reread, so the next session continues without a compaction"
+      "description": "Write a session handoff beside the design docs before /clear; /handoff:resume loads it and the files to reread"
     }
   ]
 }
