@@ -1,7 +1,7 @@
 {
   "name": "handoff",
   "description": "Write a handoff file before /clear, so the next session picks up the work without a compaction: state, decisions and the files to reread.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": {
     "name": "William Jin",
     "email": "jinwilliam.jin@gmail.com"

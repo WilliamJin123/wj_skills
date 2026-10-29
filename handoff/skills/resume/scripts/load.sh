@@ -4,7 +4,7 @@
 want=$(printf '%s' "${1:-}" | tr -cd 'a-z0-9-')
 list=$(ls -t */designs/handoffs/*.md */docs/handoffs/*.md designs/handoffs/*.md docs/handoffs/*.md handoffs/*.md 2>/dev/null)
 [ -z "$list" ] && { echo "No handoff found under $PWD."; exit 0; }
-if [ -n "$want" ]; then f=$(echo "$list" | grep -m1 -E "(^|/)$want\.md$")
+if [ -n "$want" ]; then f=$(echo "$list" | grep -m1 -E "(^|/)([0-9]{4}-[0-9]{2}-[0-9]{2}-)?$want\.md$")
 else f=$(echo "$list" | head -1); fi
 [ -z "$f" ] && { echo "No handoff named '$want'. Found:"; echo "$list"; exit 0; }
 echo "Handoff: $PWD/$f"

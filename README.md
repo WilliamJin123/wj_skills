@@ -10,7 +10,7 @@ Agent skills for Claude Code, Codex, Cursor, and any agent that reads `SKILL.md`
 | `variations` | `variations` | N numbered creative options, then you pick or merge |
 | `humanizer` | `humanizer`, `structural` | Write or rewrite human-facing text in the writer's voice: words first, then structure. Folds in [NulightJens/humanizer-stack](https://github.com/NulightJens/humanizer-stack) |
 | `jira` | `jira` | Jira work items through the official Atlassian CLI (`acli`): plain text, fewer tokens than an MCP server. Writes wait for approval |
-| `handoff` | `handoff`, `resume` | `/handoff:handoff` writes `designs/handoffs/<session name>.md` before `/clear`: state, decisions, files to reread. `/handoff:resume <name>` loads it and those files into the new session |
+| `handoff` | `handoff`, `resume` | `/handoff:handoff` writes `designs/handoffs/<date>-<session name>.md` (kept, never deleted) before `/clear`: state, decisions, files to reread. `/handoff:resume <name>` loads it and those files into the new session |
 | `icm-architect` | `icm-architect` | Turn a workflow, idea, or folder into an ICM workspace. Vendored from [RinDig/icm-architect](https://github.com/RinDig/icm-architect) |
 
 ## Install

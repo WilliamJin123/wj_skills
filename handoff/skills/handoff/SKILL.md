@@ -4,7 +4,7 @@ description: >
   Write a handoff file so the user can /clear instead of compacting, and the next session
   continues the work with /handoff:resume. Use when the user asks for a handoff, says they
   will clear, or the context is long and a fresh session would be cheaper than a compaction.
-version: 0.3.0
+version: 0.4.0
 user-invocable: true
 allowed-tools: Bash(bash ${CLAUDE_SKILL_DIR}/scripts/context.sh *)
 ---
@@ -19,9 +19,9 @@ Write the least a new session needs to continue. Nothing else. Then tell the use
 
 ## Where
 
-`<repo>/designs/handoffs/<session key>.md`, beside the design docs of the repo the work is in. The key is the session name (`/rename`), else the short session id. One file per session: other sessions share the checkout. Overwrite your own file on a second handoff. Work across repos: put it in the main one.
+`<repo>/designs/handoffs/<YYYY-MM-DD>-<session key>.md`, beside the design docs of the repo the work is in. The key is the session name (`/rename`), else the short session id. Other sessions share the checkout, so the key keeps files apart. A second handoff on the same day overwrites yours; a new day makes a new file. Work across repos: put it in the main one.
 
-Never commit a handoff. The script adds `handoffs/` to each repo's `.git/info/exclude`.
+Keep every handoff: old ones help debug. Never commit one. The script adds `handoffs/` to each repo's `.git/info/exclude`.
 
 ## Before you write
 

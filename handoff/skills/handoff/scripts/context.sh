@@ -24,7 +24,7 @@ for r in $repos; do
   s=$(git -C "$r" status --short 2>/dev/null | head -15)
   [ -n "$s" ] && { echo "- $r ($(git -C "$r" log --oneline -1 2>/dev/null))"; echo "$s" | sed 's/^/    /'; }
 done
-echo "Path: <repo>/designs/handoffs/${key:-session}.md (docs/handoffs if the repo has docs/ and no designs/; handoffs/ in the working folder when no repo fits)."
+echo "Path: <repo>/designs/handoffs/$(date +%F)-${key:-session}.md (docs/handoffs if the repo has docs/ and no designs/; handoffs/ in the working folder when no repo fits)."
 # keep handoffs out of git in every repo here, no commit needed
 for r in $repos; do
   ex="$r/.git/info/exclude"
