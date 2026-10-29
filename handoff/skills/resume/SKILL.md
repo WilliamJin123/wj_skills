@@ -4,7 +4,7 @@ description: >
   Continue work from a handoff file that /handoff:handoff wrote. Loads the handoff and the
   files under its "Read first" section into context. Use after /clear when the user says
   resume, continue from the handoff, or names a handoff key.
-version: 0.2.0
+version: 0.3.0
 user-invocable: true
 argument-hint: "[session key]"
 allowed-tools: Bash(bash ${CLAUDE_SKILL_DIR}/scripts/load.sh *)

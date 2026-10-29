@@ -4,14 +4,14 @@ description: >
   Write a handoff file so the user can /clear instead of compacting, and the next session
   continues the work with /handoff:resume. Use when the user asks for a handoff, says they
   will clear, or the context is long and a fresh session would be cheaper than a compaction.
-version: 0.2.0
+version: 0.3.0
 user-invocable: true
 allowed-tools: Bash(bash ${CLAUDE_SKILL_DIR}/scripts/context.sh *)
 ---
 
 # Handoff
 
-Write what a new session needs to continue. Nothing else. Then tell the user the line to paste after `/clear`.
+Write the least a new session needs to continue. Nothing else. Then tell the user the line to paste after `/clear`.
 
 ## Live context
 
@@ -29,22 +29,27 @@ Check the facts, do not recall them:
 - The repo list above, plus `git log --oneline -5` in each repo you changed.
 - Which background tasks, servers and watchers of yours run now.
 
+## Budget
+
+The next session reads the whole file and every **Read first** file before it acts. Every line costs tokens.
+- At most 30 lines and 300 words. One line per bullet.
+- Point, do not copy. A fact in a commit message, design doc or the code gets a path or hash, not a summary.
+- A rule that holds past this task goes to memory or CLAUDE.md now, not here.
+- Nothing left to do? Write no handoff. Tell the user to `/clear`, and give any open question in your reply.
+
 ## Sections
 
-Short bullets. Summaries, not transcripts. Point to a file instead of copying it.
+1. **Goal**: the task in one sentence, in the user's terms.
+2. **Read first**: at most 3 entries, in order, each with why. A path in backticks, relative to the repo root or absolute. Give the part it needs as `path:start-end`. A whole file only when it is short or the next session edits most of it. `/handoff:resume` loads these, so check each path exists. This is the most important section.
+3. **State**: commit hashes with pushed and deployed or not; uncommitted files; where the work stopped.
+4. **Next**: the next steps, in order.
+5. **Decisions**: each choice made with the user, one line with why. Name rejected options, so the next session does not offer them again.
+6. **Rules**: user instructions for this task only, not in CLAUDE.md or memory. Exact words where the wording matters.
+7. **Traps**: what failed and why, test quirks, what not to touch.
+8. **Running**: processes to restart or stop (command, port, task name).
+9. **Open questions**: what waits on the user.
 
-1. **Goal**: the task in one or two sentences, in the user's terms.
-2. **Read first**: the files the next session must reread before it acts, in order, one per bullet, with why. Design docs, plans, specs, the code it will edit. Write each path in backticks, relative to the repo root or absolute (`path:line` is fine). `/handoff:resume` loads these files into the new session, so put no path here that it does not need. This is the most important section.
-3. **Done**: what is finished, with commit hashes and whether it is pushed and deployed.
-4. **In progress**: uncommitted changes (file list) and where the work stopped.
-5. **Next**: the next steps, in order.
-6. **Decisions**: each choice made with the user, and why. Include rejected options, so the next session does not offer them again.
-7. **Rules from this session**: instructions the user gave that are not in CLAUDE.md or memory. Exact words where the wording matters.
-8. **Traps**: what failed and why, test quirks, things not to touch.
-9. **Running**: processes to restart or stop (command, port, task name).
-10. **Open questions**: what waits on the user.
-
-Leave out what CLAUDE.md, memory or the files already say. Leave out empty sections.
+Leave out empty sections.
 
 ## After you write
 
