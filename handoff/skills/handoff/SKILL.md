@@ -4,7 +4,7 @@ description: >
   Write a handoff file so the user can /clear instead of compacting, and the next session
   continues the work with /handoff:resume. Use when the user asks for a handoff, says they
   will clear, or the context is long and a fresh session would be cheaper than a compaction.
-version: 0.4.0
+version: 0.5.0
 user-invocable: true
 allowed-tools: Bash(bash ${CLAUDE_SKILL_DIR}/scripts/context.sh *)
 ---
