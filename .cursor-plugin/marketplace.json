@@ -46,6 +46,11 @@
       "name": "handoff",
       "source": "handoff",
       "description": "Write a session handoff beside the design docs before /clear; /handoff:resume loads it and the files to reread"
+    },
+    {
+      "name": "stagefilm",
+      "source": "stagefilm",
+      "description": "Film the real app's motion (SwiftUI or web stories), read it frame by frame, fix it to the stageshow rules: one source of truth, no faux UI"
     }
   ]
 }

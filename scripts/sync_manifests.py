@@ -26,6 +26,14 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 # Codex marketplace UI fields that have no Claude Code equivalent.
 CODEX_INTERFACE = {
+    "stagefilm": {
+        "displayName": "Stagefilm",
+        "category": "Design",
+        "capabilities": ["Interactive", "Write"],
+        "defaultPrompt": [
+            "Film the Matrix story and fix the largest motion fault.",
+        ],
+    },
     "adversary": {
         "displayName": "Adversary",
         "category": "Coding",
