@@ -1,6 +1,6 @@
 {
   "name": "stagefilm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Stageshow's motion and craft rules applied to the real product: spec each screen's motion, build it in the app's own framework, film the app, read the frames. No mock UI",
   "author": {
     "name": "William Jin",

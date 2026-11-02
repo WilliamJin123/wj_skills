@@ -11,11 +11,14 @@
 ## Recording
 
 1. `xcrun simctl status_bar <udid> override --time 9:41 --batteryState charged --batteryLevel 100 --wifiBars 3 --cellularBars 4`.
-2. `build-for-testing` first, so the film holds only the run.
-3. Start `xcrun simctl io <udid> recordVideo --codec h264 --force raw.mov`, then `test-without-building -only-testing:<target>/<class>/test<Story>`.
-4. Stop the recorder with SIGINT.
-5. The recorder starts before it prints "Recording started". Date the first frame as `stop time - video duration`, then convert marks to video time.
-6. ffmpeg: trim `start`..`end`, h264 crf 18, `yuv420p`, `+faststart`. Sheet: `fps=48/len,scale=150:-1,tile=12x4`. Beat sheets: `fps=20,tile=8x4`, up to 1.6 s from each mark.
+2. A test plan on the film scheme keeps Xcode's screen recording: `"defaultOptions": {"preferredScreenCaptureFormat": "video", "systemAttachmentLifetime": "keepAlways"}`.
+3. `build-for-testing` first, so the film holds only the run.
+4. `test-without-building -resultBundlePath run.xcresult -only-testing:<target>/<class>/test<Story>`.
+5. `xcrun xcresulttool export attachments --path run.xcresult --output-path att`. The `.mp4` entry's `timestamp` in `manifest.json` is its first frame, on the same clock as the marks.
+6. ffmpeg: `fps=60,trim=start:end,setpts=PTS-STARTPTS`, h264 crf 18, `yuv420p`, `+faststart`. Sheet: `fps=48/len,scale=150:-1,tile=12x4`. Beat sheets: `fps=20,tile=8x4`, up to 1.6 s from each mark.
+
+Never use `simctl io recordVideo` for films. It writes frames only on change and drops still stretches from its clock, so films run fast and marks drift.
+Never write output beside the stories folder: macOS is case-insensitive, and the build bundles it.
 
 William's apps: `appship <slug> film <Story>... [--canvas]` does all of this (config `film:` in `ship.yml`).
 
