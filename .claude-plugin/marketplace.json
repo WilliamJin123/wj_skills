@@ -49,6 +49,11 @@
       "name": "stagefilm",
       "source": "./stagefilm/",
       "description": "Film the real app's motion (SwiftUI or web stories), read it frame by frame, fix it to the stageshow rules: one source of truth, no faux UI"
+    },
+    {
+      "name": "app-design",
+      "source": "./app-design/",
+      "description": "Native-quality mobile screens to a checkable bar: HIG fidelity, anti-slop counts, navigation and motion laws, a full-motion simulator loop. Vendored from Appllama (design skill only), plus a SwiftUI map"
     }
   ]
 }
