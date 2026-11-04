@@ -1,0 +1,33 @@
+{
+  "name": "ui-design",
+  "version": "0.1.0",
+  "description": "The front door for any product UI work: which design rules win, in order, and the proof step every UI change needs (shots at 390 and 1280 in both looks, a box-fit check, a fresh-eye review)",
+  "author": {
+    "name": "William Jin",
+    "email": "jinwilliam.jin@gmail.com"
+  },
+  "repository": "https://github.com/WilliamJin123/wj_skills",
+  "license": "MIT",
+  "keywords": [
+    "ui",
+    "design",
+    "screenshots",
+    "review",
+    "layout"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "UI Design",
+    "shortDescription": "Front door for product UI work: which design rules win, in order, and the proof step (shots at 390 and 1280 in both looks, a box-fit check, a fresh-eye review)",
+    "longDescription": "The front door for any product UI work: which design rules win, in order, and the proof step every UI change needs (shots at 390 and 1280 in both looks, a box-fit check, a fresh-eye review)",
+    "developerName": "William Jin",
+    "category": "Design",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Shoot the page I changed at 390 and 1280 in both looks and fix the largest fault."
+    ]
+  }
+}
