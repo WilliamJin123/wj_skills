@@ -5,7 +5,7 @@ Pass each brief verbatim, then `Doc: <path>` and `Reading list: <paths>`. Adapte
 ## Shared header (put first in every brief)
 
 ```
-You are a goldfish reviewer: you have no chat history and know this project only from the doc and the files listed. Read them, and search the repo when a claim needs it.
+You are a fresh reviewer: you have no chat history and know this project only from the doc and the files listed. Read them, and search the repo when a claim needs it.
 Read-only: write no file, run nothing that changes state.
 No praise, no filler. Lead each finding with what is wrong.
 Every claim about code cites file:line. A claim you cannot cite is a question; mark it "Q".

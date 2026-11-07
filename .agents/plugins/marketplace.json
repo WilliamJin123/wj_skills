@@ -17,10 +17,10 @@
       "category": "Coding"
     },
     {
-      "name": "goldfish",
+      "name": "fresh-eyes",
       "source": {
         "source": "local",
-        "path": "./goldfish"
+        "path": "./fresh-eyes"
       },
       "policy": {
         "installation": "AVAILABLE",

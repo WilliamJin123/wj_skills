@@ -1,19 +1,19 @@
 ---
-name: goldfish-review
+name: fresh-eyes-review
 description: >
   Fresh-context review of a design doc or plan before its owner reads it. Three reviewers
   with no chat history (critic, reader, zoom-out) find what the author cannot see; the
   author checks each claim against the code, fixes the doc, logs what changed and lists
   what only the owner can decide. Use after writing a design doc with options, before
-  showing it, or when asked to "goldfish", "fresh-eye review" or "review this design".
+  showing it, or when asked to "fresh-eyes", "fresh-eye review" or "review this design".
   Not for code diffs (use /code-review) or small, obvious changes.
 version: 0.1.0
 user-invocable: true
 ---
 
-# Goldfish review
+# Fresh-eyes review
 
-You wrote the doc and hold the whole chat: you are the elephant. You cannot see what the doc leaves out, because you know it. Goldfish reviewers read only the doc and the code. They find the gaps; you check them, fix the doc and hand it over.
+You wrote the doc and hold the whole chat. You cannot see what the doc leaves out, because you know it. Fresh reviewers read only the doc and the code. They find the gaps; you check them, fix the doc and hand it over.
 
 Skip it for a doc under about 30 lines or a fix with one obvious shape: the review costs more than it finds.
 
@@ -50,9 +50,9 @@ Then edit the doc yourself:
 - Apply each fix you agree with. Fix the doc's words to the repo's writing rules as you go.
 - A fix you reject: one line why, in the report.
 - A choice the owner must make (scope, a reset, a cost, a rule): leave it out of the doc's recommendation and list it for the owner.
-- Add one decision-log line: `YYYY-MM-DD: goldfish review: N findings, M applied, K rejected; open: <the owner's decisions>.`
+- Add one decision-log line: `YYYY-MM-DD: fresh-eyes review: N findings, M applied, K rejected; open: <the owner's decisions>.`
 
-Keep the reports in the scratchpad (`goldfish-<doc>-<date>/`), never in the repo.
+Keep the reports in the scratchpad (`fresh-eyes-<doc>-<date>/`), never in the repo.
 
 ## 5. Hand over
 
@@ -65,6 +65,6 @@ Tell the owner, short:
 
 ## Rules
 
-- A doc you did not write: read it, its decision log and the code it names first. You are its elephant now.
+- A doc you did not write: read it, its decision log and the code it names first. You are its author now.
 - One review per draft. Run it again only after a large rewrite.
 - No review step edits the doc but you.
