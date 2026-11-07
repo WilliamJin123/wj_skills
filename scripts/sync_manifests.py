@@ -42,14 +42,11 @@ CODEX_INTERFACE = {
             "Film the Matrix story and fix the largest motion fault.",
         ],
     },
-    "adversary": {
-        "displayName": "Adversary",
+    "goldfish": {
+        "displayName": "Goldfish",
         "category": "Coding",
         "capabilities": ["Interactive", "Write"],
-        "defaultPrompt": [
-            "Critique the changes on this branch.",
-            "Run a red-team sweep since the last audit.",
-        ],
+        "defaultPrompt": ["Review this design doc with fresh eyes before I read it."],
     },
     "humanizer": {
         "displayName": "Humanizer",

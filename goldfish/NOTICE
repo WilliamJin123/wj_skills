@@ -1,0 +1,6 @@
+The reviewer briefs in skills/review/references/reviewers.md are adapted from
+google/elephant-goldfish-model (https://github.com/google/elephant-goldfish-model),
+Copyright Google LLC, licensed under the Apache License 2.0
+(https://www.apache.org/licenses/LICENSE-2.0).
+Changes: ten personas merged into three, rewritten, modes and gates removed,
+a code-check step and a decision-log step added (2026-11-07).

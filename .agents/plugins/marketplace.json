@@ -17,10 +17,10 @@
       "category": "Coding"
     },
     {
-      "name": "adversary",
+      "name": "goldfish",
       "source": {
         "source": "local",
-        "path": "./adversary"
+        "path": "./goldfish"
       },
       "policy": {
         "installation": "AVAILABLE",

@@ -4,7 +4,7 @@ Agent skills for Claude Code, Codex, Cursor, and any agent that reads `SKILL.md`
 
 | Plugin | Skills | What it does |
 |---|---|---|
-| `adversary` | `critique`, `defend`, `red-team` | Hostile review, an independent defense pass, and a recurring audit loop with fixes on a branch |
+| `goldfish` | `review` | Fresh-context review of a design doc: critic and reader with no chat history, a zoom-out pass, claims checked against the code. Replaced `adversary` (2026-11-07; history in git) |
 | `tutor` | `init`, `write`, `ask` | Audience-aware tutorials and Q&A grounded in them |
 | `task-sprint` | `new`, `run` | Dated checklist files worked through in a loop |
 | `variations` | `variations` | N numbered creative options, then you pick or merge |
@@ -21,10 +21,10 @@ Agent skills for Claude Code, Codex, Cursor, and any agent that reads `SKILL.md`
 
 ```
 /plugin marketplace add WilliamJin123/wj_skills
-/plugin install adversary@wj-skills
+/plugin install goldfish@wj-skills
 ```
 
-Swap in any plugin name from the table. Commands are `/<plugin>:<skill>`, e.g. `/adversary:critique`, `/task-sprint:new`.
+Swap in any plugin name from the table. Commands are `/<plugin>:<skill>`, e.g. `/goldfish:review`, `/task-sprint:new`.
 
 Update: `/plugin marketplace update wj-skills`.
 
@@ -37,15 +37,15 @@ npx skills add WilliamJin123/wj_skills -g
 ```
 
 - `-a codex -a cursor` picks agents. Omit it to choose interactively.
-- `-s adversary-critique -s tutor-write` picks skills. Omit it to get all of them.
-- Standalone skill names are hyphenated: `adversary-critique`, `task-sprint-run`, `tutor-ask`. In Codex, invoke with `$adversary-critique`.
+- `-s goldfish-review -s tutor-write` picks skills. Omit it to get all of them.
+- Standalone skill names are hyphenated: `goldfish-review`, `task-sprint-run`, `tutor-ask`. In Codex, invoke with `$goldfish-review`.
 - Update: `npx skills update`.
 
 ### Codex plugins
 
 ```
 codex plugin marketplace add WilliamJin123/wj_skills
-codex plugin add adversary
+codex plugin add goldfish
 ```
 
 The marketplace is `.agents/plugins/marketplace.json`. Each plugin has a `.codex-plugin/plugin.json`.
@@ -100,4 +100,4 @@ Edit only the `.claude-plugin` manifests. Check sync with `python3 scripts/sync_
 git subtree pull --prefix=icm-architect/skills/icm-architect git@github.com:RinDig/icm-architect.git main --squash
 ```
 
-Skill `name` fields follow the [Agent Skills spec](https://agentskills.io/specification): lowercase letters, digits, and hyphens only. Claude Code names plugin skills `plugin:<folder>`, so `/adversary:critique` still works.
+Skill `name` fields follow the [Agent Skills spec](https://agentskills.io/specification): lowercase letters, digits, and hyphens only. Claude Code names plugin skills `plugin:<folder>`, so `/goldfish:review` works.

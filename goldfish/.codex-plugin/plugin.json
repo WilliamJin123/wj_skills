@@ -1,0 +1,33 @@
+{
+  "name": "goldfish",
+  "version": "0.1.0",
+  "description": "Fresh-context review of a design doc or plan: reviewers with no chat history, a simplicity pass over their findings, every claim checked against the code before the author reads it. Replaces adversary.",
+  "author": {
+    "name": "William Jin",
+    "email": "jinwilliam.jin@gmail.com"
+  },
+  "repository": "https://github.com/WilliamJin123/wj_skills",
+  "license": "MIT",
+  "keywords": [
+    "review",
+    "design-doc",
+    "plan",
+    "fresh-context",
+    "goldfish"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Goldfish",
+    "shortDescription": "Fresh-context review of a design doc or plan: critic and reader with no chat history, a zoom-out pass, claims checked against the code (/goldfish:review)",
+    "longDescription": "Fresh-context review of a design doc or plan: reviewers with no chat history, a simplicity pass over their findings, every claim checked against the code before the author reads it. Replaces adversary.",
+    "developerName": "William Jin",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Review this design doc with fresh eyes before I read it."
+    ]
+  }
+}

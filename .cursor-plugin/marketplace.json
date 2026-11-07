@@ -4,7 +4,7 @@
     "name": "William Jin"
   },
   "metadata": {
-    "description": "William Jin's agent skills: adversarial review, tutorials, task sprints, variations, humanizer, ICM architect, Jira, handoff, UI design"
+    "description": "William Jin's agent skills: fresh-context design review, tutorials, task sprints, variations, humanizer, ICM architect, Jira, handoff, UI design"
   },
   "plugins": [
     {
@@ -13,9 +13,9 @@
       "description": "Audience-aware tutorials and Q&A for any codebase: /tutor:init, /tutor:write, /tutor:ask"
     },
     {
-      "name": "adversary",
-      "source": "adversary",
-      "description": "Adversarial skills: one-pass critique + defend, and a recurring red-team loop (diff-scoped audits, orchestrated fixes on a branch)"
+      "name": "goldfish",
+      "source": "goldfish",
+      "description": "Fresh-context review of a design doc or plan: critic and reader with no chat history, a zoom-out pass, claims checked against the code (/goldfish:review)"
     },
     {
       "name": "task-sprint",
