@@ -1,5 +1,5 @@
 {
-  "name": "fresh-eyes",
+  "name": "goldfish",
   "description": "Fresh-context review of a design doc or plan: reviewers with no chat history, a simplicity pass over their findings, every claim checked against the code before the author reads it. Replaces adversary.",
   "version": "0.1.0",
   "author": {
@@ -8,5 +8,5 @@
   },
   "repository": "https://github.com/WilliamJin123/wj_skills",
   "license": "MIT",
-  "keywords": ["review", "design-doc", "plan", "fresh-context", "fresh-eyes"]
+  "keywords": ["review", "design-doc", "plan", "fresh-context", "goldfish"]
 }

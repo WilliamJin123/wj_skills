@@ -1,5 +1,5 @@
 {
-  "name": "fresh-eyes",
+  "name": "goldfish",
   "version": "0.1.0",
   "description": "Fresh-context review of a design doc or plan: reviewers with no chat history, a simplicity pass over their findings, every claim checked against the code before the author reads it. Replaces adversary.",
   "author": {
@@ -13,12 +13,12 @@
     "design-doc",
     "plan",
     "fresh-context",
-    "fresh-eyes"
+    "goldfish"
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Fresh Eyes",
-    "shortDescription": "Fresh-context review of a design doc or plan: critic and reader with no chat history, a zoom-out pass, claims checked against the code (/fresh-eyes:review)",
+    "displayName": "Goldfish",
+    "shortDescription": "Fresh-context review of a design doc or plan: critic and reader with no chat history, a zoom-out pass, claims checked against the code (/goldfish:review)",
     "longDescription": "Fresh-context review of a design doc or plan: reviewers with no chat history, a simplicity pass over their findings, every claim checked against the code before the author reads it. Replaces adversary.",
     "developerName": "William Jin",
     "category": "Coding",

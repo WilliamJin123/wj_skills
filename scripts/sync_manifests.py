@@ -42,8 +42,8 @@ CODEX_INTERFACE = {
             "Film the Matrix story and fix the largest motion fault.",
         ],
     },
-    "fresh-eyes": {
-        "displayName": "Fresh Eyes",
+    "goldfish": {
+        "displayName": "Goldfish",
         "category": "Coding",
         "capabilities": ["Interactive", "Write"],
         "defaultPrompt": ["Review this design doc with fresh eyes before I read it."],
