@@ -13,7 +13,6 @@ Agent skills for Claude Code, Codex, Cursor, and any agent that reads `SKILL.md`
 | `jira` | `jira` | Jira work items through the official Atlassian CLI (`acli`): plain text, fewer tokens than an MCP server. Writes wait for approval |
 | `handoff` | `handoff`, `resume` | `/handoff:handoff` writes `designs/handoffs/<date>-<session name>.md` (kept, never deleted) before `/clear`: state, decisions, files to reread. `/handoff:resume <name>` loads it and those files into the new session |
 | `icm-architect` | `icm-architect` | Turn a workflow, idea, or folder into an ICM workspace. Vendored from [RinDig/icm-architect](https://github.com/RinDig/icm-architect) |
-| `app-design` | `app-design` | Native-quality mobile screens to a checkable bar: HIG fidelity, anti-slop counts, navigation and motion laws, a full-motion simulator loop. Vendored from [Appllama/appllama-skills](https://github.com/Appllama/appllama-skills) (design skill only; its research skill needs a paid MCP), plus a SwiftUI map |
 
 ## Install
 
