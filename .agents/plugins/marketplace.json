@@ -123,18 +123,6 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"
-    },
-    {
-      "name": "ui-design",
-      "source": {
-        "source": "local",
-        "path": "./ui-design"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Design"
     }
   ]
 }

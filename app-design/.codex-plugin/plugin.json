@@ -1,6 +1,6 @@
 {
   "name": "app-design",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Native-quality mobile screens: HIG fidelity, anti-slop counts, navigation laws, a motion frequency gate and a full-motion simulator loop. Vendored from Appllama/appllama-skills (design skill only, no paid MCP), plus a SwiftUI map",
   "author": {
     "name": "William Jin",

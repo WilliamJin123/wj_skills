@@ -54,11 +54,6 @@
       "name": "app-design",
       "source": "./app-design/",
       "description": "Native-quality mobile screens to a checkable bar: HIG fidelity, anti-slop counts, navigation and motion laws, a full-motion simulator loop. Vendored from Appllama (design skill only), plus a SwiftUI map"
-    },
-    {
-      "name": "ui-design",
-      "source": "./ui-design/",
-      "description": "Front door for product UI work: which design rules win, in order, and the proof step (shots at 390 and 1280 in both looks, a box-fit check, a fresh-eye review)"
     }
   ]
 }

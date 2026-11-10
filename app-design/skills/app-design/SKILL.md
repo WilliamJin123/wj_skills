@@ -15,6 +15,12 @@ metadata:
 > **SwiftUI project?** Read [references/swiftui.md](references/swiftui.md) first: it maps each
 > Expo rule below to its SwiftUI form. The laws hold; only the APIs change.
 
+**Enter through `ui-design`.** That skill is the one door for UI work: it gives the order of rule
+sources, the state table every spec needs, the shared rule sets and the proof step. This skill is the
+mobile how for its Build and Prove steps: native controls, navigation, the simulator loop. Where a law
+here and a `ui-design` rule differ, the order in `ui-design` section 0 decides. The state table
+(SV-1 to SV-6) comes before any screen; one simulator shot per state row is the proof (SV-18).
+
 You are building screens that will sit on a phone next to the best-designed apps
 in the world. The user will compare your output to those apps within seconds of
 launching it. This skill defines the bar and the method for clearing it.
