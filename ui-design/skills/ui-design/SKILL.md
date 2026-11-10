@@ -41,8 +41,9 @@ If the repo has its own UI skill (wren: `wren-ui`), follow its loop for where pa
    - A state that needs a click (an open menu, a hover tip): shoot it with your own Playwright lines, at the same widths.
 3. Read every PNG. Open each with the Read tool. Name the largest fault and fix it, then shoot again. Order: layout and fit, then hierarchy, then spacing and type, then polish.
 4. Box-fit findings: fix each one, or write in one line why it is a false alarm. Its lines and their meaning: the table "Lines that are never intentional" in `~/.claude/skills/stageshow/references/rehearse.md`. Never clear a line by hiding the thing it points at.
-5. Fresh-eye review. Give one subagent (Sonnet) the PNG paths, the rules sources above and the brief in `~/.claude/skills/stageshow/references/review.md`. Do not give it your view of the screens. Fix what it finds that the rules support. Push back on the rest, in one line each.
-6. Check the diff against the artifact (rule 1). Then run the repo's UI gate.
+5. Worst case: run the `break-ui` skill on every changed part. When motion changed, also run `review-animations`. Fix what each finds, or write in one line why not.
+6. Fresh-eye review. Give one subagent (Sonnet) the PNG paths, the rules sources above and the brief in `~/.claude/skills/stageshow/references/review.md`. Do not give it your view of the screens. Fix what it finds that the rules support. Push back on the rest, in one line each.
+7. Check the diff against the artifact (rule 1). Then run the repo's UI gate.
 
 ## 4. Hand over
 
